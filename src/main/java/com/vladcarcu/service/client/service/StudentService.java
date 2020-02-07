@@ -1,6 +1,7 @@
 package com.vladcarcu.service.client.service;
 
 import java.util.List;
+import java.util.concurrent.Future;
 
 import com.vladcarcu.service.client.entity.Student;
 
@@ -9,5 +10,9 @@ import com.vladcarcu.service.client.entity.Student;
  */
 public interface StudentService {
 
+    Student findStudentById(Long id);
+
     List<Student> findAll();
+
+    Future<List<Student>> findAllAsync();
 }
